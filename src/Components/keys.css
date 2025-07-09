@@ -1,0 +1,99 @@
+.keypad-bg{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 27em;
+    padding: 15px;
+    height: 23em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background: hsl(223, 31%, 20%);
+    border-radius: 8px;
+}
+
+.keypad-bg-light{
+    background: hsl(0, 5%, 81%);
+}
+
+.keypad-bg-purple{
+    background: hsl(268, 71%, 12%);
+}
+
+.keypad-bg button:nth-of-type(17){
+    grid-column: 1/3;
+}
+.keypad-bg button:last-child{
+    grid-column: 3 / 5;
+}
+
+
+.keypad-bg button:nth-of-type(17),
+.keypad-bg button:last-child{
+    width: 190px;
+}
+
+.keypad-bg button:nth-of-type(4), 
+.keypad-bg button:nth-of-type(17){
+    background: hsl(225, 21%, 49%);
+    box-shadow: 0 3px 0 hsl(224, 28%, 35%);
+}
+
+.keypad-bg button:nth-of-type(4):hover, 
+.keypad-bg button:nth-of-type(17):hover{
+    background: hsl(225, 94%, 86%);
+}
+
+.keypad-bg-light button:nth-of-type(4), 
+.keypad-bg-light button:nth-of-type(17){
+    background: hsl(185, 42%, 37%);
+    box-shadow: 0 3px 0 hsl(185, 58%, 25%);
+}
+
+.keypad-bg-light button:nth-of-type(4):hover, 
+.keypad-bg-light button:nth-of-type(17):hover{
+    background: hsl(185, 56%, 57%);
+}
+
+.keypad-bg-purple button:nth-of-type(4), 
+.keypad-bg-purple button:nth-of-type(17){
+    background: hsl(281, 89%, 26%);
+    box-shadow: 0 3px 0 hsl(285, 91%, 52%);
+}
+
+.keypad-bg-purple button:nth-of-type(4):hover, 
+.keypad-bg-purple button:nth-of-type(17):hover{
+    background: hsl(281, 80%, 38%);
+}
+
+.keypad-bg button:last-child{
+    background: hsl(6, 63%, 50%);
+    box-shadow: 0 3px 0 hsl(6, 70%, 34%);
+}
+
+.keypad-bg button:last-child:hover{
+    background: hsl(6, 98%, 66%);
+}
+
+.keypad-bg-light button:last-child{
+    background: hsl(25, 98%, 40%);
+    box-shadow: 0 3px 0 hsl(25, 99%, 27%);
+}
+
+.keypad-bg-light button:last-child:hover{
+    background: hsl(25, 100%, 55%);
+}
+
+.keypad-bg-purple button:last-child{
+    background: hsl(176, 100%, 44%);
+    box-shadow: 0 3px 0 hsl(177, 92%, 70%);
+}
+
+.keypad-bg-purple button:last-child:hover{
+    background: hsl(176, 95%, 74%);
+}
+
+.keypad-bg button:nth-of-type(4), 
+.keypad-bg button:nth-of-type(17),
+.keypad-bg button:last-child{
+ color: white;
+}

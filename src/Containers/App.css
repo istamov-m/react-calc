@@ -1,0 +1,20 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: hsl(222, 26%, 31%);
+  transition: 0.3s all;
+}
+
+.main-bg{
+  background: hsl(222, 26%, 31%);
+}
+
+.light-bg{
+  background: hsl(0, 0%, 90%);
+}
+
+.purple-bg{
+  background: hsl(268, 75%, 9%);
+}
