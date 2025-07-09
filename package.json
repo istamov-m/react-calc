@@ -1,7 +1,7 @@
 {
   "name": "my-app",
-  "homepage": "https://istamov-m.github.io/react-app",
   "version": "0.1.0",
+  "homepage": "https://istamov-m.github.io/react-calc",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
