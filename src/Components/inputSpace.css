@@ -24,3 +24,15 @@
     background: hsl(268, 71%, 12%);
     color: hsl(52, 100%, 62%);;
 }
+
+@media (max-width: 600px) {
+    .input-space{
+        font-size: 40px;
+        font-weight: bold;
+        border-radius: 8px;
+        height: 70px;
+        width: 8.55em;
+        margin: 20px 0;
+        padding: 20px;
+    }
+}

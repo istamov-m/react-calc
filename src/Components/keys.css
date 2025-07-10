@@ -97,3 +97,17 @@
 .keypad-bg button:last-child{
  color: white;
 }
+
+@media (max-width: 600px) {
+    .keypad-bg{
+        width: 22em;
+        padding: 15px;
+        height: 34em;
+        border-radius: 12px;
+    }
+
+    .keypad-bg button:nth-of-type(17),
+    .keypad-bg button:last-child{
+        width: 160px;
+    }
+}

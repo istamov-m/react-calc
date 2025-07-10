@@ -1,19 +1,8 @@
 import React from "react";
 import Key from './Key';
-import { values } from "../values";
 import './keys.css'
 
 const Keys = ({KeyPad, Color, TypeOne, TypeTwo, TypeThree, TypeFour, TypeFive, TypeSix, TypeSeven, TypeEight, TypeNine, TypeZero, TypePlus, TypeMinus, TypeTimes, TypeDivision, TypeDel, TypeDot, TypeReset, TypeEqual}) => {
-    // const keyComponent = values.map((user, i) => {
-    //     return(
-    //         <Key
-    //             TypeContent={InputContent}
-    //             BtnBgColor={Color}
-    //             Content={values[i].key} 
-    //         />
-    //     )
-    // })
-
     return (
         <div className={`keypad-bg ${KeyPad}`}>
             <Key

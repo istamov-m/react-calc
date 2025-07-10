@@ -4,7 +4,6 @@ import InputSpace from '../Components/InputSpace';
 import Keys from '../Components/Keys';
 import Key from '../Components/Key';
 import './App.css';
-import { values } from '../values';
 
 class App extends Component{
   constructor() {
@@ -22,7 +21,6 @@ class App extends Component{
       // calculations
       content: '',
       childData: '',
-      values: values,
       checkPlus: false,
       checkMinus: false,
       checkTimes: false,
@@ -35,192 +33,210 @@ class App extends Component{
     this.onColorChangeLight = this.onColorChangeLight.bind(this);
     this.onColorChangePurple = this.onColorChangePurple.bind(this);
 
-    // this.contentType = this.contentType.bind(this);
   }
 
   // color change
 
   onColorChangeMain(){
-    this.setState({mainBgColor: 'main-bg'})
-    this.setState({color: ''})
-    this.setState({keypadBg: 'keypad-bg'})
-    this.setState({swtchColor: ''})
-    this.setState({swtchBg: ''})
-    this.setState({fontColor: 'font-main'})
-    this.setState({inputBg: ''})
+    this.setState({
+      mainBgColor: 'main-bg', 
+      color: '', 
+      keypadBg: 'keypad-bg', 
+      swtchColor: '', 
+      fontColor: 'font-main', 
+      inputBg: ''
+    });
   }
 
   onColorChangeLight(){
-    this.setState({mainBgColor: 'light-bg'});
-    this.setState({color: 'light-key-bg'});
-    this.setState({keypadBg: 'keypad-bg-light'})
-    this.setState({swtchColor: 'switch-slider-light'})
-    this.setState({swtchBg: 'switch-theme-light'})
-    this.setState({fontColor: 'font-light'})
-    this.setState({inputBg: 'input-space-light'})
+    this.setState({mainBgColor: 'light-bg', 
+      color: 'light-key-bg', 
+      keypadBg: 'keypad-bg-light', 
+      swtchColor: 'switch-slider-light', 
+      swtchBg: 'switch-theme-light',
+      fontColor: 'font-light', 
+      inputBg: 'input-space-light'});
   }
 
   onColorChangePurple(){
-    this.setState({mainBgColor: 'purple-bg'})
-    this.setState({color: 'purple-key-bg'});
-    this.setState({keypadBg: 'keypad-bg-purple'})
-    this.setState({swtchColor: 'switch-slider-purple'})
-    this.setState({swtchBg: 'switch-theme-purple'})
-    this.setState({fontColor: 'font-purple'})
-    this.setState({inputBg: 'input-space-purple'})
+    this.setState({mainBgColor: 'purple-bg', 
+      color: 'purple-key-bg', 
+      keypadBg: 'keypad-bg-purple', 
+      swtchColor: 'switch-slider-purple', 
+      swtchBg: 'switch-theme-purple', 
+      fontColor: 'font-purple', 
+      inputBg: 'input-space-purple'});
   }
 
   // calculations
 
   typeNine = () => {
-    this.setState({content: this.state.content += "9"})
+    this.setState({content: this.state.content += "9"});
   }
 
   typeEight = () => {
-    this.setState({content: this.state.content += "8"})
+    this.setState({content: this.state.content += "8"});
   }
 
   typeSeven = () => {
-    this.setState({content: this.state.content += "7"})
+    this.setState({content: this.state.content += "7"});
   }
 
   typeSix = () => {
-    this.setState({content: this.state.content += "6"})
+    this.setState({content: this.state.content += "6"});
   }
 
   typeFive = () => {
-    this.setState({content: this.state.content += "5"})
+    this.setState({content: this.state.content += "5"});
   }
 
   typeFour = () => {
-    this.setState({content: this.state.content += "4"})
+    this.setState({content: this.state.content += "4"});
   }
 
   typeThree = () => {
-    this.setState({content: this.state.content += "3"})
+    this.setState({content: this.state.content += "3"});
   }
 
   typeTwo = () => {
-    this.setState({content: this.state.content += "2"})
+    this.setState({content: this.state.content += "2"});
   }
 
   typeOne = () => {
-    this.setState({content: this.state.content += "1"})
+    this.setState({content: this.state.content += "1"});
   }
 
   typeZero = () => {
-    this.setState({content: this.state.content += "0"})
+    this.setState({content: this.state.content += "0"});
   }
 
   typeDot = () => {
-    this.setState({content: this.state.content += "."})
+    this.setState({content: this.state.content += "."});
   }
 
   typeReset = () => {
-    this.setState({content: ""})
-    this.setState({calcResult: ''})
+    this.setState({
+      content: "", 
+      calcResult: ''
+    });
   }
 
   typeDel = () => {
-    this.setState({content: this.state.content.slice(0, -1)})
+    this.setState({content: this.state.content.slice(0, -1)});
   }
 
   checkForFirstValue(){
     if(this.state.fValue == 0){
-      this.setState({fValue: this.state.fValue = parseFloat(this.state.content)})
+      this.setState({fValue: this.state.fValue = parseFloat(this.state.content)});
     }
   }
 
   checkForPlus(){
     if(this.state.checkPlus){
-      this.setState({sValue: this.state.sValue = parseFloat(this.state.content)})
-      this.setState({fValue: this.state.fValue = this.state.fValue + this.state.sValue})
-      this.setState({checkPlus: false})
+      this.setState({
+        sValue: this.state.sValue = parseFloat(this.state.content), 
+        fValue: this.state.fValue = this.state.fValue + this.state.sValue, 
+        checkPlus: false
+      });
     } 
   }
 
   checkForMinus(){
     if(this.state.checkMinus){
-      this.setState({sValue: this.state.sValue = parseFloat(this.state.content)})
-      this.setState({fValue: this.state.fValue = this.state.fValue - this.state.sValue})
-      this.setState({checkMinus: false})
+      this.setState({
+        sValue: this.state.sValue = parseFloat(this.state.content), 
+        fValue: this.state.fValue = this.state.fValue - this.state.sValue, 
+        checkMinus: false
+      });
     }
   }
 
   checkForTimes(){
     if(this.state.checkTimes){
-      this.setState({sValue: this.state.sValue = parseFloat(this.state.content)})
-      this.setState({fValue: this.state.fValue = this.state.fValue * this.state.sValue})
-      this.setState({checkTimes: false})
+      this.setState({sValue: this.state.sValue = parseFloat(this.state.content), 
+        fValue: this.state.fValue = this.state.fValue * this.state.sValue, 
+        checkTimes: false
+      });
     } 
   }
 
   checkForDivision(){
     if(this.state.checkDivision){
-      this.setState({sValue: this.state.sValue = parseFloat(this.state.content)})
-      this.setState({fValue: this.state.fValue = this.state.fValue / this.state.sValue})
-      this.setState({checkDivision: false})
+      this.setState({sValue: this.state.sValue = parseFloat(this.state.content), 
+        fValue: this.state.fValue = this.state.fValue / this.state.sValue, 
+        checkDivision: false
+      });
     }
+  }
+
+  checkForOperations(){
+    this.checkForPlus();
+    this.checkForMinus();
+    this.checkForTimes(); 
+    this.checkForDivision();
   }
 
   typePlus = () => {
     this.checkForFirstValue();
 
-    this.checkForMinus();
-    this.checkForTimes(); 
-    this.checkForDivision();
+    this.checkForOperations();
 
-    this.setState({checkPlus: true})
-    this.setState({content: ''})
+    this.setState({
+      checkPlus: true, 
+      content: ''
+    })
   }
 
   typeMinus = () => {
     this.checkForFirstValue();
 
-    this.checkForPlus(); 
-    this.checkForTimes(); 
-    this.checkForDivision();
+    this.checkForOperations();
 
-
-    this.setState({checkMinus: true})
-    this.setState({content: ''})
+    this.setState({
+      checkMinus: true, 
+      content: ''
+    })
   }
 
   typeTimes = () => {
     this.checkForFirstValue();
 
-    this.checkForPlus();  
-    this.checkForMinus();
-    this.checkForDivision();
+    this.checkForOperations();
 
-    this.setState({checkTimes: true})
-    this.setState({content: ''})
+    this.setState({
+      checkTimes: true, 
+      content: ''
+    });
   }
 
   typeDivision = () => {
     this.checkForFirstValue();
 
-    this.checkForPlus(); 
-    this.checkForMinus();
-    this.checkForTimes();
+    this.checkForOperations();
 
-    this.setState({checkDivision: true})
-    this.setState({content: ''})
+    this.setState({
+      checkDivision: true, 
+      content: ''
+    });
   }
 
   typeEqual = () => {
-    this.setState({sValue: this.state.sValue = parseFloat(this.state.content)})
-    if(this.state.checkPlus) this.setState({calcResult: this.state.calcResult = this.state.fValue + this.state.sValue})
-    if(this.state.checkMinus) this.setState({calcResult: this.state.calcResult = this.state.fValue - this.state.sValue})
-    if(this.state.checkTimes) this.setState({calcResult: this.state.calcResult = this.state.fValue * this.state.sValue})
-    if(this.state.checkDivision) this.setState({calcResult: this.state.calcResult = this.state.fValue / this.state.sValue})
-    this.setState({content: this.state.content = String(this.state.calcResult)})
-    this.setState({checkPlus: false})
-    this.setState({checkMinus: false})
-    this.setState({checkTimes: false})
-    this.setState({checkDivision: false})
-    this.setState({fValue: 0})
-    this.setState({sValue: 0})
+    this.setState({sValue: this.state.sValue = parseFloat(this.state.content)});
+
+    if(this.state.checkPlus) this.setState({calcResult: this.state.calcResult = this.state.fValue + this.state.sValue});
+    else if(this.state.checkMinus) this.setState({calcResult: this.state.calcResult = this.state.fValue - this.state.sValue});
+    else if(this.state.checkTimes) this.setState({calcResult: this.state.calcResult = this.state.fValue * this.state.sValue});
+    else if(this.state.checkDivision) this.setState({calcResult: this.state.calcResult = this.state.fValue / this.state.sValue});
+
+    this.setState({
+      content: this.state.content = String(this.state.calcResult),
+      checkPlus: false, 
+      checkMinus: false, 
+      checkTimes: false, 
+      checkDivision: false,
+      fValue: 0, 
+      sValue: 0
+    });
   }
 
   render() {

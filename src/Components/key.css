@@ -3,12 +3,12 @@ button{
     border: none;
     width: 80px;
     height: 52px;
+    font-size: 30px;
     border-radius: 6px;
     box-shadow: 0 3px 0 hsl(28, 16%, 65%);
     transition: 0.2s all;
     color: hsl(60, 10%, 19%);
     padding: 0;
-    font-size: 30px;
     font-weight: bold;
 }
 
@@ -31,4 +31,26 @@ button{
 
 button:hover{
     background: white;
+}
+
+@media (max-width: 600px) {
+    button{
+        width: 70px;
+        height: 82px;
+        font-size: 30px;
+        border-radius: 8px;
+        box-shadow: 0 7px 0 hsl(28, 16%, 65%);
+    }
+
+    .light-key-bg {
+    box-shadow: 0 7px 0 hsl(35, 11%, 61%);
+}
+
+    .purple-key-bg {
+        box-shadow: 0 7px 0 hsl(290, 70%, 36%);
+    }
+
+    .purple-key-bg:hover{
+        box-shadow: 0 7px 0 hsl(285, 91%, 52%);
+    }
 }

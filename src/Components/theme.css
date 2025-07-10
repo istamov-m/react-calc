@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* border: 1px solid black; */
 }
 
 .theme{
@@ -10,16 +9,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid black; */
     width: 110px;
     color: hsl(0, 0%, 100%);
 }
 
 .theme h4{
   align-self: flex-end;
-  /* justify-self: end; */
   font-size: 11px;
-  /* color: hsl(0, 0%, 100%); */
 }
 
 h1, h4, p{
@@ -40,7 +36,6 @@ h1, h4, p{
   align-items: center;
   justify-content: center;
   height: 70px;
-  /* border: 1px solid black; */
 }
 
 .switch p {
@@ -120,4 +115,29 @@ h1, h4, p{
 /* Изменение цвета текста при выборе */
 input:checked + label {
   color: white;
+}
+
+@media (max-width: 600px) {
+    .theme h4{
+      align-self: flex-end;
+      margin-left: -50px;
+      font-size: 15px;
+    }
+
+
+    .switch p {
+      word-spacing: 10px;
+      font-size: 13px;
+    }
+
+    .switch-theme{
+      width: 75px;
+      height: 44px;
+    }
+
+    .switch-slider{
+      width: 20px;
+      height: 20px;
+      margin: 6.5px 0;
+    }
 }
